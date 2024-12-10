@@ -1,6 +1,8 @@
 ---
-- hosts: all
-  name: Setup OpenVPN server
+- name: Setup OpenVPN server
+  hosts: all
+  vars_files:
+    - inventories/group_vars/all/main.yml
   become: yes
   roles:
     - openvpn
